@@ -3,7 +3,7 @@ package albgorski.playground.adventofcode
 import org.scalatest.{FlatSpec, Matchers}
 
 class Day1Test extends FlatSpec with Matchers {
-  "countTheFloors" should "be 0 for (())" in {
+  "floor number" should "be 0 for (())" in {
     Day1.countTheFloor("(())") should ===(0)
   }
   it should "be 3 for (((" in {
