@@ -1,8 +1,5 @@
 package albgorski.playground.adventofcode
 
-
-import scala.collection.mutable
-
 object Day3 {
 
   case class HouseCords(x: Int, y: Int)
