@@ -26,15 +26,17 @@ object Day3 {
   }
 
   val countHouses = (input: String) => {
-    val left: mutable.Seq[HouseCords] = input.toList.foldLeft(mutable.Seq(HouseCords(0, 0)))((s: mutable.Seq[HouseCords], current: Char) => {
-      current match {
-        case '^' => s :+ HouseCords.up(s.last)
-        case 'v' => s :+ HouseCords.down(s.last)
-        case '>' => s :+ HouseCords.right(s.last)
-        case '<' => s :+ HouseCords.left(s.last)
-        case _ => s
-      }
-    })
-    left.distinct.size
+    input
+      .foldLeft(Seq(HouseCords(0, 0)))((s: Seq[HouseCords], current: Char) => {
+        current match {
+          case '^' => s :+ HouseCords.up(s.last)
+          case 'v' => s :+ HouseCords.down(s.last)
+          case '>' => s :+ HouseCords.right(s.last)
+          case '<' => s :+ HouseCords.left(s.last)
+          case _ => s
+        }
+      })
+      .distinct
+      .size
   }
 }
