@@ -3,6 +3,8 @@ package albgorski.playground.adventofcode
 import albgorski.playground.adventofcode.Day1.{countTheFloor, findFirstPositionForBasement}
 import org.scalatest.{FlatSpec, Matchers}
 
+import scala.io.Source
+
 class Day1Test extends FlatSpec with Matchers {
   "floor number" should "be 0 for (())" in {
     countTheFloor("(())") should ===(0)
@@ -33,6 +35,6 @@ class Day1Test extends FlatSpec with Matchers {
     findFirstPositionForBasement("()())") should ===(5)
   }
   it should "be 1783 if the input my puzzle input" in {
-    findFirstPositionForBasement(Day1.puzzleInput) should ===(1783)
+    findFirstPositionForBasement(Source.fromURL(getClass.getResource("day1.txt")).mkString) should ===(1783)
   }
 }

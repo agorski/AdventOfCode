@@ -7,17 +7,6 @@ object Day5 {
 
   private val wrongStrings: Seq[String] = Seq("ab", "cd", "pq", "xy")
 
-  val niceOrNaughtyLines = (input: String) => {
-    val lines: Iterator[String] = Source.fromString(input).getLines()
-    val all: Int = lines.map(l => {
-      niceOrNaughty(l) match {
-        case Nice => 1
-        case _ => 0
-      }
-    }).sum
-    all
-  }
-
   /*
   It contains at least three vowels (aeiou only).
   It contains at least one letter that appears twice in a row, like xx
@@ -27,12 +16,11 @@ object Day5 {
     val finalStatus: Status = input.foldLeft(Status(naughty = false, vowelCount = 0, letterTwice = false, char = ' '))((acc: Status, c: Char) => {
       acc match {
         case r@Status(true, _, _, _) => r
-        case _ => {
+        case _ =>
           val newVowelCount: Int = acc.vowelCount + oneForVowelOrZero(c)
           val isLetterTwice: Boolean = acc.letterTwice || (acc.char == c)
           val isNaughty: Boolean = wrongStrings.contains(Array(acc.char, c).mkString(""))
           Status(isNaughty, newVowelCount, isLetterTwice, c)
-        }
       }
     })
 
@@ -42,7 +30,16 @@ object Day5 {
     }
   }
 
-  def oneForVowelOrZero(c: Char): Int = {
+  val niceOrNaughtyLines = (input: Source) => {
+    val lines: Iterator[String] = input.getLines()
+    lines.map(niceOrNaughty).count {
+      case Nice => true
+      case _ => false
+    }
+  }
+
+
+  private[this] def oneForVowelOrZero(c: Char): Int = {
     c match {
       case 'a' | 'e' | 'i' | 'o' | 'u' => 1
       case _ => 0

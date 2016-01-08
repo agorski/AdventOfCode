@@ -2,8 +2,6 @@ package albgorski.playground.adventofcode
 
 object Day4 {
 
-  val puzzleInput = "bgvyzdsv"
-
   val findLowest = (input: String) => {
     var counter: Int = 0
     var result: String = ""
