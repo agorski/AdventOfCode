@@ -20,12 +20,13 @@ class Day5Test extends FlatSpec with Matchers {
   "dvszwmarrgswjxmb" should "is naughty because it contains only one vowel." in {
     niceOrNaughty("dvszwmarrgswjxmb") should be(Naughty)
   }
-  "puzzle" should "is naughty because it contains only one vowel." in {
-    Day5.niceOrNaughtyLines(input) should be(40)
+  "puzzle number" should "is 583" in {
+    Day5.niceOrNaughtyLines(input) should be(583)
   }
 
   val input =
-    """zgsnvdmlfuplrubt
+    """
+      |zgsnvdmlfuplrubt
       |vlhagaovgqjmgvwq
       |ffumlmqwfcsyqpss
       |zztdcqzqddaazdjp
@@ -1024,5 +1025,6 @@ class Day5Test extends FlatSpec with Matchers {
       |sztzziuqroeidcus
       |pxdfvcpvwaddrzwv
       |phdqqxleqdjfgfbg
-      |cqfikbgxvjmnfncy"""
+      |cqfikbgxvjmnfncy
+      | """
 }
