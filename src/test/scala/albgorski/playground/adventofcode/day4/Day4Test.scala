@@ -1,6 +1,6 @@
-package albgorski.playground.adventofcode
+package albgorski.playground.adventofcode.day4
 
-import albgorski.playground.adventofcode.Day4.findLowest
+import albgorski.playground.adventofcode.day4.Day4.findLowest
 import org.scalatest.{FlatSpec, Matchers}
 
 import scala.io.Source

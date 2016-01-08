@@ -1,6 +1,6 @@
-package albgorski.playground.adventofcode
+package albgorski.playground.adventofcode.day1
 
-import albgorski.playground.adventofcode.Day1.{countTheFloor, findFirstPositionForBasement}
+import albgorski.playground.adventofcode.day1.Day1.{countTheFloor, findFirstPositionForBasement}
 import org.scalatest.{FlatSpec, Matchers}
 
 import scala.io.Source

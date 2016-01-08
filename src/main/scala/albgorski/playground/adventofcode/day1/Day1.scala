@@ -1,4 +1,4 @@
-package albgorski.playground.adventofcode
+package albgorski.playground.adventofcode.day1
 
 object Day1 {
 

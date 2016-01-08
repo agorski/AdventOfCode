@@ -1,6 +1,7 @@
-package albgorski.playground.adventofcode
+package albgorski.playground.adventofcode.day5
 
 import albgorski.playground.adventofcode.Day5.niceOrNaughty
+import albgorski.playground.adventofcode.{Day5, Naughty, Nice}
 import org.scalatest.{FlatSpec, Matchers}
 
 import scala.io.Source

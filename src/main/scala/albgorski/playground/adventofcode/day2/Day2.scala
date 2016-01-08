@@ -1,4 +1,4 @@
-package albgorski.playground.adventofcode
+package albgorski.playground.adventofcode.day2
 
 import scala.io.Source
 
@@ -13,7 +13,7 @@ object Day2 {
       2 * surface1 + 2 * surface2 + 2 * surface3
     }
     val slack = {
-      surface1 :: surface2 :: surface3 :: Nil min
+      (surface1 :: surface2 :: surface3 :: Nil).min
     }
   }
 

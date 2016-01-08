@@ -1,6 +1,6 @@
-package albgorski.playground.adventofcode
+package albgorski.playground.adventofcode.day2
 
-import albgorski.playground.adventofcode.Day2.countTheSquareFeets
+import albgorski.playground.adventofcode.day2.Day2.countTheSquareFeets
 import org.scalatest.{FlatSpec, Matchers}
 
 import scala.io.Source
