@@ -1,12 +1,11 @@
 package albgorski.playground.adventofcode.day5
 
-import albgorski.playground.adventofcode.Day5.niceOrNaughty
-import albgorski.playground.adventofcode.{Day5, Naughty, Nice}
+import albgorski.playground.adventofcode.day5.Day5Part1.{Naughty, Nice, niceOrNaughty}
 import org.scalatest.{FlatSpec, Matchers}
 
 import scala.io.Source
 
-class Day5Test extends FlatSpec with Matchers {
+class Day5Part1Test extends FlatSpec with Matchers {
 
   "ugknbfddgicrmopn" should "be nice because it has at least three vowels (u...i...o...), a double letter (...dd...), and none of the disallowed substrings" in {
     niceOrNaughty("ugknbfddgicrmopn") should be(Nice)
@@ -30,6 +29,6 @@ class Day5Test extends FlatSpec with Matchers {
     niceOrNaughty("dvszwmarrgswjxmb") should be(Naughty)
   }
   "count of nice elements in PUZZLE" should "be 238" in {
-    Day5.niceOrNaughtyLines(Source.fromURL(getClass.getResource("day5.txt"))) should be(238)
+    Day5Part1.niceOrNaughtyLines(Source.fromURL(getClass.getResource("day5.txt"))) should be(238)
   }
 }

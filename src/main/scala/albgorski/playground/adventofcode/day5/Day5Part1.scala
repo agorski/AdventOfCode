@@ -1,9 +1,9 @@
-package albgorski.playground.adventofcode
+package albgorski.playground.adventofcode.day5
 
 import scala.io.Source
 
 
-object Day5 {
+object Day5Part1 {
 
   private val wrongStrings: Seq[String] = Seq("ab", "cd", "pq", "xy")
 
@@ -45,12 +45,14 @@ object Day5 {
       case _ => 0
     }
   }
+
+  sealed case class Status(naughty: Boolean, vowelCount: Int, letterTwice: Boolean, char: Char)
+
+  sealed trait Answer
+
+  sealed case class Nice() extends Answer
+
+  sealed case class Naughty() extends Answer
+
 }
 
-sealed case class Status(naughty: Boolean, vowelCount: Int, letterTwice: Boolean, char: Char)
-
-sealed trait Answer
-
-sealed case class Nice() extends Answer
-
-sealed case class Naughty() extends Answer
