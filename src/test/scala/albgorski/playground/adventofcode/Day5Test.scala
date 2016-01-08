@@ -17,6 +17,12 @@ class Day5Test extends FlatSpec with Matchers {
   "haegwjzuvuyypxyu" should "is naughty because it contains the string xy" in {
     niceOrNaughty("haegwjzuvuyypxyu") should be(Naughty)
   }
+  "haegwjzuvuyypaxy" should "is naughty because it contains the string xy" in {
+    niceOrNaughty("haegwjzuvuyypaxy") should be(Naughty)
+  }
+  "xyhaegwjzuvuyypa" should "is naughty because it contains the string xy" in {
+    niceOrNaughty("xyhaegwjzuvuyypa") should be(Naughty)
+  }
   "dvszwmarrgswjxmb" should "is naughty because it contains only one vowel." in {
     niceOrNaughty("dvszwmarrgswjxmb") should be(Naughty)
   }

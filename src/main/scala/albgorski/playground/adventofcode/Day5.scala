@@ -30,7 +30,7 @@ object Day5 {
         case _ => {
           val newVowelCount: Int = acc.vowelCount + oneForVowelOrZero(c)
           val isLetterTwice: Boolean = acc.letterTwice || (acc.char == c)
-          val isNaughty: Boolean = wrongStrings.contains(acc.char.toString + c.toString)
+          val isNaughty: Boolean = wrongStrings.contains(Array(acc.char, c).mkString(""))
           Status(isNaughty, newVowelCount, isLetterTwice, c)
         }
       }
